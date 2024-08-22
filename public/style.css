@@ -1,0 +1,97 @@
+General Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    /* background-color: #333; */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav button {
+    /* background-color: #444; */
+    background-color:white;
+    color: #131212;
+    border: none;
+    padding: 13px 48px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid black;
+
+}
+
+nav button:hover {
+    background-color: #555;
+}
+
+/* Main Section */
+.promotions-section {
+    padding: 20px;
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 475px;
+}
+
+.promotion-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 418px;
+    text-align: center;
+    position: relative;
+    margin-left: -40px;
+    border: 1px solid black;
+}
+
+
+.promotion-card h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.promotion-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+
+
+.promotion-card button {
+    background-color: #736464;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.promotion-card button:hover {
+    background-color: black;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
