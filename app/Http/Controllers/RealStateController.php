@@ -8,9 +8,6 @@ use Validator;
 class RealStateController extends Controller
 {
 
-
-       
-    
     public function index()
     {
         $realEstates = RealEstate::select('id', 'city', 'name')->where('deleted_at',null)->get();
@@ -138,7 +135,6 @@ public function update(Request $request ,$id)
       return response()->json($validator->errors(), 422);
     }
 
-    // Create an instance of RealEstate and assign values
     $realEstate = RealEstate::findOrFail($id);
     $realEstate->name = $request->name;
     $realEstate->real_state_type = $request->real_state_type;
@@ -152,7 +148,6 @@ public function update(Request $request ,$id)
     $realEstate->bathrooms = $request->bathrooms;
     $realEstate->comments = $request->comments ?? null;
 
-    // Save the instance to the database
     $realEstate->save();
 
     
@@ -165,14 +160,14 @@ if($realEstate){
     $data['status']= false;
     return response()->json('', 401);
 }
-    // Return the newly created record in the response with a 201 status
+   
     
 
 }
 
 public function deletedlist()
 {
-    // Retrieve only soft-deleted records
+    
     $realEstates = RealEstate::onlyTrashed()->select('id', 'city', 'name')->get();
     if($realEstates){
     return response()->json([
@@ -190,7 +185,7 @@ public function deletedlist()
 
 
  
-public function show($id)
+   public function show($id)
     {
         $realEstates = RealEstate::select('id','name','real_state_type','street','external_number','external_number','neighborhood','country','rooms','bathrooms','comments', 'city', 'name')->where('id',$id)->get();
        
